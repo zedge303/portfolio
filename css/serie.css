@@ -1,0 +1,115 @@
+body.page-serie {
+  background-color: white;
+  color: black;
+}
+
+body.page-serie .navbar {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Forcer le titre/logo de la navbar à rester blanc sur les pages de séries */
+body.page-serie .navbar h1 a {
+  color: #ffffff;
+}
+
+.project-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 10% 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.project-info {
+  flex: 1.5;
+}
+
+.project-info h2 {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 20px;
+  font-family: var(--font-serif);
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.project-image img:hover {
+  opacity: 0.9;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #353535;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: black;
+}
+
+.puzzle-section {
+  background-color: var(--color-bg-alt);
+  width: 100%;
+  padding: var(--spacing-section) 0;
+}
+
+.puzzle-container {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.puzzle-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.puzzle-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.puzzle-column img:hover {
+  transform: scale(1.02);
+}
+
+.col-2 {
+  margin-top: 60px;
+}
+
+.col-3 {
+  margin-top: -30px;
+}
+

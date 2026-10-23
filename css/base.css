@@ -1,0 +1,93 @@
+:root {
+  --color-bg: #000;
+  --color-bg-alt: rgb(41, 41, 41);
+  --color-text: #fff;
+  --color-text-muted: #888;
+  --color-text-dark: #303030;
+  --font-sans: 'Helvetica Neue', Helvetica, sans-serif;
+  --font-serif: Georgia, serif;
+  --spacing-section: 100px;
+  --max-width: 1200px;
+  --navbar-height: 70px;
+  --base-font-size: 16px;
+  --hero-title-size: 3rem;
+  --section-title-size: 2.5rem;
+  --body-text-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--base-font-size);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1024px;
+  font-family: var(--font-sans);
+  font-size: var(--body-text-size);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+img,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+footer {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer-content h3 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--color-text);
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 0.7rem;
+  color: #444;
+}
+
+/* Développement : image référencée mais absente du dossier */
+img.img-missing {
+  outline: 2px dashed #c0392b;
+  outline-offset: 2px;
+}

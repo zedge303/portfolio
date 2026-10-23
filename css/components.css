@@ -1,0 +1,147 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  text-transform: uppercase;
+}
+
+nav a:hover,
+nav a.active {
+  opacity: 0.6;
+}
+
+/* Hero (partagé entre les pages) */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  object-position: center center;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.hero-text h2 {
+  font-size: var(--hero-title-size);
+  margin: 0;
+}
+
+.hero-text p {
+  margin: 8px 0 0;
+  font-size: 1.1rem;
+}
+
+/* Lightbox (une seule définition) */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+.lightbox.zoomed-mode {
+  backdrop-filter: none;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  touch-action: none;
+  cursor: zoom-in;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
+  animation: lightbox-zoom-in 0.3s ease;
+}
+
+.lightbox-content.zoomed {
+  cursor: grab;
+}
+
+.lightbox-content.dragging {
+  cursor: grabbing;
+  transition: none !important;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2001;
+  transition: color 0.3s;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+@keyframes lightbox-zoom-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
