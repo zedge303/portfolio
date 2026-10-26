@@ -80,6 +80,39 @@ footer {
   color: var(--color-text);
 }
 
+/* Alignement et espacement pour les liens du footer */
+.footer-content .footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  gap: 20px; /* Espace harmonieux entre les éléments */
+}
+
+.footer-content .footer-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* Style de l'icône Instagram dans le footer */
+.footer-content .footer-links a.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.footer-content .footer-links a.social-icon svg {
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.footer-content .footer-links a.social-icon:hover svg {
+  opacity: 0.7;
+}
+
 .copyright {
   margin-top: 40px;
   font-size: 0.7rem;
